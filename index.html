@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>www.foodiesworld.com</title>
+<link rel="stylesheet" type="text/css" href="css/hirescript.css">
+</head>
+<script >
+ 	
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+ 	function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+ </script>
+
+<body>
+<div class="image text header">
+<img src="images/food1.png">WELCOME TO FOODIES WORLD</div>
+<br>
+<div class="t" >The World's Biggest Food Feast<br>Enjoy and explore all types of food<br>Here is the food's menu</div>
+
+<div class= " container " >
+  <button class="btn" onclick="filterSelection('south')"> South Indian</button>
+  <button class="btn" onclick="filterSelection('italian')">Italian </button>
+  <button class="btn" onclick="filterSelection('chineese')">Chineese</button>
+  <button class="btn" onclick="filterSelection('north')"> North Indian</button>
+   <button class="btn" onclick="filterSelection('arabian')">Arabian</button>
+  <button class="btn" onclick="filterSelection('cajun')">Cajun</button>
+   <button class="btn" onclick="filterSelection('thai')"> Thai food</button>
+  <button class="btn" onclick="filterSelection('dessert')">Dessert</button>
+  <button class="btn" onclick="filterSelection('icecream')">Icecream</button>
+</div>
+
+<div class="row">
+  <div class="column south">
+    <img src="images/s1.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column south">
+    <img  src="images/s2.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column south">
+    <img src="images/s3.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column italian">
+      <img  src="images/i1.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column italian">
+      <img src="images/i2.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column italian">
+      <img src="images/i3.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column chineese">
+      <img src="images/c1.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column chineese">
+      <img  src="images/c2.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column chineese">
+      <img src="images/c3.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column north">
+      <img src="images/n1.jpeg" width="400px" height="300px">
+ </div>
+
+  <div class="column north">
+      <img  src="images/n2.jpeg" width="400px" height="300px">
+  </div>
+ 
+  <div class="column north">
+       <img src="images/n3.jpeg" width="400px" height="300px">
+  </div>
+
+  <div class="column dessert">
+       <img  src="images/d1.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column dessert">
+       <img  src="images/d2.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column dessert">
+     <img  src="images/d3.jpg" width="400px" height="300px">
+  </div>
+
+  <div class="column icecream">
+    <img src="images/ic1.jpeg" width="400px" height="300px">  
+  </div>
+
+  <div class="column icecream">
+    <img src="images/ic2.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column icecream">
+    <img  src="images/ic3.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column arabian">
+    <img src="images/a1.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column arabian">
+    <img src="images/a2.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column arabian">
+     <img  src="images/a3.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column cajun">
+    <img src="images/ca1.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column cajun">
+    <img src="images/ca2.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column cajun">
+    <img  src="images/ca3.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column thai">
+    <img src="images/th1.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column thai">
+     <img src="images/th2.jpg" width="400px" height="300px">  
+  </div>
+
+  <div class="column thai">
+    <img  src="images/th3.jpg" width="400px" height="300px">  
+  </div>
+
+</div>
+
+  <div class="food">
+  	<marquee width="100%" direction="left" >
+      <img  src="images/s1.jpg" width="200px" height="200px">	
+      <img  src="images/s2.jpg" width="200px" height=200px">
+      <img  src="images/s3.jpg" width="200px" height="200px">
+      <img  src="images/i1.jpg" width="200px" height="200px">
+      <img  src="images/ic1.jpeg" width="200px" height="200px"> 
+      <img  src="images/d1.jpg" width="200px" height="200px"> 
+      <img  src="images/ic3.jpg" width="200px" height="200px"> 
+      <img  src="images/n3.jpeg" width="200px" height="200px"> 
+      <img  src="images/ic2.jpg" width="200px" height="200px">  
+      <img  src="images/d1.jpg" width="200px" height="200px">
+      <img  src="images/n4.jpeg" width="200px" height="200px"> 
+      <img  src="images/d3.jpg" width="200px" height="200px">
+    </marquee>
+</div>
+
+<div class="head">
+<marquee width="100%" direction="left">Time:7:00 am-10:00pm Venue: Grand palace, Madurai</marquee>
+</div>
+
+</body>
+</html>
